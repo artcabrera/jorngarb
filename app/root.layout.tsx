@@ -49,7 +49,12 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
               label="contact"
               className="-my-4 flex aspect-[1/2] -rotate-90 items-center justify-center text-xs"
             />
-            <div className="absolute left-1/2 top-1/2 h-1/2 w-[1px] bg-[#3C0000]" />
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="absolute left-1/2 top-1/2 h-1/2 w-[1px] bg-[#3C0000]"
+            />
           </div>
           <div>
             <div>{children}</div>

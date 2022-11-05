@@ -34,26 +34,45 @@ const Index = () => {
       >
         <div className="relative z-10 flex h-screen w-full py-[var(--py)] pl-16 pr-[var(--px)] max-md:pt-32 md:items-center md:pl-32">
           <div className="w-full max-w-2xl space-y-4 md:space-y-8">
-            <h1 className="font-serif text-[17vw] font-bold leading-[1em] md:text-[16vw] lg:text-[14vw]">
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="font-serif text-[17vw] font-bold leading-[1em] md:text-[16vw] lg:text-[14vw]"
+            >
               Hello<span className="text-[#FF7F11]">.</span>
-            </h1>
-            <h2 className="font-serif text-[24px] font-semibold leading-[1.25em] text-[#FF7F11] lg:text-[36px]">
+            </motion.h1>
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className="font-serif text-[24px] font-semibold leading-[1.25em] text-[#FF7F11] lg:text-[36px]"
+            >
               I&apos;m{" "}
               <span className="font-bold text-[#3C0000]">Jorn Blaedel</span>. A
               web developer, crafter, and problem solver.
-            </h2>
-            <p>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+            >
               I build things for the web. I enjoy improving my skills and never
               says no to a challenge.
-            </p>
-            <div className="flex">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+              className="flex"
+            >
               <Link
                 to="/projects"
                 className="block transform select-none rounded-full bg-[#3C0000] px-6 py-3 font-serif text-white transition-all duration-500 ease-in-out hover:tracking-widest md:px-8 md:py-4 md:text-xl"
               >
                 View my works
               </Link>
-            </div>
+            </motion.div>
           </div>
           <div className="absolute right-0 -z-10 translate-x-[80%] translate-y-[25%] scale-[2] select-none mix-blend-difference md:translate-x-[50%] md:translate-y-[25vh] md:scale-100">
             <img
