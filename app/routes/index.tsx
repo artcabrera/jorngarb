@@ -17,7 +17,7 @@ const Index = () => {
           delay: 0.2,
           ease: [0, 1, 1, 0],
         }}
-        className="absolute top-0 left-0 z-[111] h-fit w-full bg-[#2E4057]"
+        className="absolute top-0 left-0 z-[111] h-fit w-full bg-[#F4B393]"
       >
         <motion.div
           initial={{ height: "100vh" }}
@@ -74,7 +74,7 @@ const Index = () => {
               </Link>
             </motion.div>
           </div>
-          <div className="absolute right-0 -z-10 translate-x-[80%] translate-y-[25%] scale-[2] select-none mix-blend-difference md:translate-x-[50%] md:translate-y-[25vh] md:scale-100">
+          <div className="absolute right-0 -z-10 translate-x-[80%] translate-y-[25%] scale-[2] select-none mix-blend-difference md:translate-x-[50%] md:translate-y-[30vh] md:scale-100">
             <img
               draggable="false"
               src="/assets/images/hero.svg"

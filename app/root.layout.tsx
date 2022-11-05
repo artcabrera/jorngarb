@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Fragment } from "react";
 import { ScrollToTop } from "./components/Buttons/ScrollToTop";
@@ -23,6 +23,7 @@ const socialLinks: Link[] = [
 ];
 
 const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
+  const { key } = useLocation();
   return (
     <AnimatePresence>
       <main className="h-full min-h-screen w-screen bg-[#F1FFE7] text-[#3C0000] antialiased selection:bg-[#3C0000] selection:text-[#F1FFE7]">
@@ -49,12 +50,7 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
               label="contact"
               className="-my-4 flex aspect-[1/2] -rotate-90 items-center justify-center text-xs"
             />
-            <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              className="absolute left-1/2 top-1/2 h-1/2 w-[1px] bg-[#3C0000]"
-            />
+            <div className="absolute left-1/2 top-1/2 h-1/2 w-[1px] bg-[#3C0000]" />
           </div>
           <div>
             <div>{children}</div>
@@ -98,6 +94,17 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
             </footer>
           </div>
           <Cursor />
+          <motion.div
+            key={key}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            transition={{ delay: 0.75 }}
+            className="fixed top-1/2 left-1/2 z-[121]"
+          >
+            <span className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 select-none font-serif text-8xl font-bold text-[#F1FFE7]">
+              J.
+            </span>
+          </motion.div>
         </div>
       </main>
     </AnimatePresence>

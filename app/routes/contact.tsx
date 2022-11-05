@@ -13,7 +13,7 @@ const Contact = () => {
           delay: 0.2,
           ease: [0, 1, 1, 0],
         }}
-        className="absolute top-0 left-0 z-[111] h-screen w-full bg-[#2E4057]"
+        className="absolute top-0 left-0 z-[111] h-screen w-full bg-[#F4B393]"
       />
       <motion.div
         initial={{ opacity: 0 }}
