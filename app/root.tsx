@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => ({
   "og:site_name": "Jorn Blaedel Garbosa — Web Developer",
   "og:title": "Jorn Blaedel Garbosa — Web Developer",
   "og:description": "A web developer, crafter, and problem solver.",
-  "og:image": "https://jornhub.art/images/share.png",
+  "og:image": "https://jornhub.art/assets/images/share.png",
   "og:image:type": "image/png",
   "og:image:width": "1280",
   "og:image:height": "768",
